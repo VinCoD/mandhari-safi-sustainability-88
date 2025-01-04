@@ -23,6 +23,11 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center">
+            <img 
+              src="/lovable-uploads/ca27e2bc-cc21-4286-85c8-a3ee2416d76d.png" 
+              alt="Mandhari Safi Logo" 
+              className="h-12 w-auto mr-2"
+            />
             <span className="text-primary font-bold text-xl">Mandhari Safi</span>
           </Link>
 
