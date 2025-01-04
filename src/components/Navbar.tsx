@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -9,11 +9,12 @@ import {
 } from "@/components/ui/sheet";
 
 const Navbar = () => {
+  const location = useLocation();
   const navItems = [
-    { label: "About", href: "#about" },
-    { label: "Our Work", href: "#work" },
-    { label: "Blog", href: "#blog" },
-    { label: "Get Involved", href: "#get-involved" },
+    { label: "About", href: "/about" },
+    { label: "Our Work", href: "/work" },
+    { label: "Blog", href: "/blog" },
+    { label: "Get Involved", href: "/get-involved" },
   ];
 
   return (
@@ -28,13 +29,17 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.label}
-                href={item.href}
-                className="text-gray-600 hover:text-primary transition-colors"
+                to={item.href}
+                className={`transition-colors ${
+                  location.pathname === item.href
+                    ? "text-primary font-semibold"
+                    : "text-gray-600 hover:text-primary"
+                }`}
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
             <Button className="bg-primary hover:bg-primary/90">
               Donate Now
@@ -52,13 +57,17 @@ const Navbar = () => {
               <SheetContent>
                 <div className="flex flex-col space-y-4 mt-8">
                   {navItems.map((item) => (
-                    <a
+                    <Link
                       key={item.label}
-                      href={item.href}
-                      className="text-gray-600 hover:text-primary transition-colors py-2"
+                      to={item.href}
+                      className={`transition-colors py-2 ${
+                        location.pathname === item.href
+                          ? "text-primary font-semibold"
+                          : "text-gray-600 hover:text-primary"
+                      }`}
                     >
                       {item.label}
-                    </a>
+                    </Link>
                   ))}
                   <Button className="bg-primary hover:bg-primary/90 w-full">
                     Donate Now
