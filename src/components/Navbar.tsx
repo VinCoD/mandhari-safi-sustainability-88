@@ -24,7 +24,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img 
-              src="/lovable-uploads/ca27e2bc-cc21-4286-85c8-a3ee2416d76d.png" 
+              src="/lovable-uploads/621ffb6a-3001-41ec-ae39-ad0197ad66ab.png" 
               alt="Mandhari Safi Logo" 
               className="h-12 w-auto mr-2 mix-blend-multiply"
             />
