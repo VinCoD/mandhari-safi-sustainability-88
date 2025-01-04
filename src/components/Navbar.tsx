@@ -26,7 +26,7 @@ const Navbar = () => {
             <img 
               src="/lovable-uploads/ca27e2bc-cc21-4286-85c8-a3ee2416d76d.png" 
               alt="Mandhari Safi Logo" 
-              className="h-12 w-auto mr-2"
+              className="h-12 w-auto mr-2 mix-blend-multiply"
             />
             <span className="text-primary font-bold text-xl">Mandhari Safi</span>
           </Link>
